@@ -1,0 +1,129 @@
+:root {
+    --primary: #4f46e5; /* Indigo */
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --border: #cbd5e1;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+header { text-align: center; margin-bottom: 25px; }
+header h1 { color: var(--text); margin: 0; font-size: 1.8rem; }
+header p { color: #64748b; font-size: 0.9rem; }
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Upload */
+.drop-zone {
+    border: 2px dashed var(--primary);
+    background: #eef2ff;
+    padding: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.drop-zone:hover { background: #e0e7ff; }
+.icon { font-size: 3rem; margin-bottom: 10px; }
+.hidden { display: none; }
+
+#file-details { margin-top: 15px; color: var(--primary); font-weight: 600; }
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.btn-primary:disabled { background: #94a3b8; cursor: not-allowed; }
+
+.btn-secondary {
+    background: white;
+    border: 2px solid var(--border);
+    color: var(--text);
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Score Display - The Big Number */
+.score-box {
+    margin-bottom: 20px;
+}
+.score-label {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #64748b;
+    font-weight: 700;
+}
+#score-display {
+    font-size: 5rem; /* Massive Text */
+    margin: 10px 0;
+    color: var(--primary);
+    line-height: 1;
+}
+#score-rating {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Suggestions */
+.divider { height: 1px; background: #e2e8f0; margin: 20px 0; }
+.feedback h3 { font-size: 1rem; color: var(--text); margin-bottom: 15px; text-align: left; }
+
+.feedback ul { list-style: none; padding: 0; text-align: left; }
+.feedback li {
+    background: #fff1f2;
+    color: #be123c;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-left: 5px solid #f43f5e;
+}
+.feedback li.success {
+    background: #f0fdf4;
+    color: #15803d;
+    border-left: 5px solid #22c55e;
+}
+
+/* Loader */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
