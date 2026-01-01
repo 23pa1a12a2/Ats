@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Checker</title>
+    <link rel="stylesheet" href="ats.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>ATS Resume Scanner</h1>
+            <p>Check your resume's ATS compatibility score instantly.</p>
+        </header>
+
+        <div class="card">
+            
+            <div id="upload-section">
+                <div class="drop-zone" id="drop-zone">
+                    <div class="icon">📄</div>
+                    <h3>Upload Resume</h3>
+                    <p class="sub-text">PDF, JPG, or PNG</p>
+                    <input type="file" id="file-input" hidden accept=".pdf, .png, .jpg, .jpeg">
+                </div>
+                <div id="file-details" class="hidden">
+                    <p id="filename">resume.pdf</p>
+                </div>
+                <button id="scan-btn" class="btn-primary" disabled>Check My Score</button>
+            </div>
+
+            <div id="loading-section" class="hidden">
+                <div class="spinner"></div>
+                <p id="loading-text">Analyzing file structure...</p>
+            </div>
+
+            <div id="result-section" class="hidden">
+                
+                <div class="score-box">
+                    <span class="score-label">YOUR ATS SCORE</span>
+                    <h1 id="score-display">0</h1> <p id="score-rating">Good</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="feedback">
+                    <h3>📝 Improvement Suggestions</h3>
+                    <ul id="suggestions-list">
+                        </ul>
+                </div>
+
+                <button class="btn-secondary" onclick="resetApp()">Check Another File</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ats.js"></script>
+</body>
+</html>
