@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # Replace with your actual API key
-client = genai.Client(api_key="AIzaSyCmqpexhnBhVKKXqy0CnGTFKbz3oMg_Jg4")
+client = genai.Client(api_key="API_Key")
 
 def extract_text_from_pdf(file):
     reader = PdfReader(file)
